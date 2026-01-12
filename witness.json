@@ -1,0 +1,12 @@
+{
+  "role": "witness",
+  "capabilities": {
+    "read": true,
+    "write": false,
+    "interpret": false,
+    "respond": false
+  },
+  "state": "passive",
+  "expectation": "none",
+  "note": "This interface does not participate. It remains."
+}
