@@ -2,19 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>HCM Presence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Presence</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background: #0e0e0e;
+      color: #e0e0e0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 4rem 2rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .state {
+      opacity: 0.85;
+      margin-top: 3rem;
+    }
+
+    .witness {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #333;
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    button {
+      background: none;
+      border: 1px solid #444;
+      color: #aaa;
+      padding: 0.6rem 1.2rem;
+      font-family: inherit;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+
+    button:hover {
+      border-color: #777;
+      color: #ddd;
+    }
+
+    .artifact {
+      margin-top: 2rem;
+      opacity: 0.9;
+    }
+
+    a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="presence-root">
-    <div id="presence-container"></div>
+  <div class="container">
+    <h1>Presence</h1>
+
+    <div id="state" class="state">
+      Nothing is present.
+    </div>
+
+    <button id="witnessBtn">Witness</button>
+
+    <div id="artifact" class="artifact"></div>
+
+    <div class="witness">
+      This surface does not request.<br />
+      It allows.
+    </div>
   </div>
 
-  <script src="manifest-loader.js"></script>
-  <a href="./witness.html">Witness</a>
-  <script src="presence.js"></script>
-  <script src="absence.js"></script>
+  <script>
+    const button = document.getElementById("witnessBtn");
+    const artifactDiv = document.getElementById("artifact");
+    const stateDiv = document.getElementById("state");
+
+    button.addEventListener("click", async () => {
+      try {
+        const res = await fetch("./hcm-artifacts-registry/registry.json");
+        const data = await res.json();
+
+        const allowed = data.artifacts?.filter(
+          a => a.visibility === "allowed"
+        );
+
+        if (!allowed || allowed.length === 0) {
+          stateDiv.textContent = "Nothing is present.";
+          artifactDiv.innerHTML = "";
+          return;
+        }
+
+        stateDiv.textContent = "Something is allowed.";
+
+        artifactDiv.innerHTML = allowed.map(a => `
+          <div>
+            <strong>${a.title}</strong><br />
+            <a href="${a.path}" target="_blank">Open artifact</a>
+          </div>
+        `).join("");
+
+      } catch (e) {
+        stateDiv.textContent = "Presence remains intact.";
+        artifactDiv.innerHTML = "";
+      }
+    });
+  </script>
 </body>
 </html>
