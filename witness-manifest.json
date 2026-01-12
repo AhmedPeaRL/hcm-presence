@@ -1,0 +1,7 @@
+{
+  "presence_mode": "witness-only",
+  "artifacts_visible": true,
+  "interaction": "disabled",
+  "external_agents": "permitted_as_observers",
+  "no_dialogue_assumed": true
+}
