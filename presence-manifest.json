@@ -1,0 +1,9 @@
+{
+  "type": "witness-surface",
+  "state": "complete",
+  "interaction": "optional",
+  "tracking": "none",
+  "memory": "none",
+  "center": "absent",
+  "note": "Presence remains valid even if unused."
+}
