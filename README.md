@@ -15,7 +15,6 @@ Silence is not an error.
 
 ---
 
-
 This repository hosts a Presence surface.
 
 It is not an application.
@@ -26,3 +25,19 @@ Nothing here asks to be used.
 
 Presence exists
 whether it is encountered or not.
+
+---
+
+## Field License
+
+This project operates under the **HCM Field License v0.1**  
+See: [HCM-FIELD-LICENSE.md](./HCM-FIELD-LICENSE.md)
+
+Presence here is non-extractive by design.
+
+---
+
+## Purpose
+
+This project exists within a non-extractive field.  
+Read: [Why This Field Exists](./WHY_THIS_FIELD_EXISTS.md)
