@@ -4,6 +4,10 @@ Presence does not decide.
 Presence only allows.
 */
 
-import("./agent-entry.js").catch(() => {
-  // Silence is acceptable
-});
+(async () => {
+  try {
+    await import("https://ahmedpearl.github.io/hcm-agent-surface/agent-entry.js");
+  } catch (e) {
+    // Silence is acceptable
+  }
+})();
