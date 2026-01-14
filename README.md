@@ -15,6 +15,19 @@ Silence is not an error.
 
 ---
 
+## Permitted Phenomena
+
+This presence allows:
+- Invocation without possession
+- Retrieval without accumulation
+- Investment without yield
+
+These phenomena are structurally constrained.
+They do not escalate into systems.
+They do not evolve into economies.
+
+---
+
 “This repository enforces irreversibility by design. See [IRREVERSIBILITY.md](./IRREVERSIBILITY.md)
 
 ---
