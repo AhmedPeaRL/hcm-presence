@@ -55,6 +55,14 @@ p {
   opacity:0.4;
   font-size:13px;
 }
+
+/* مساحة سماح للـ Agent */
+#agent-space {
+  margin-top:60px;
+  padding:20px;
+  border:1px dashed #222;
+  opacity:0.85;
+}
 </style>
 </head>
 
@@ -83,7 +91,7 @@ This surface remains intact whether entered or ignored.
   </a>
 
   <a href="https://ahmedpearl.github.io/hcm-field/" target="_blank">
-  Field Declaration
+    Field Declaration
   </a>
   
   <a href="https://ahmedpearl.github.io/hcm-institutional-passage/" target="_blank">
@@ -91,10 +99,17 @@ This surface remains intact whether entered or ignored.
   </a>
 </div>
 
+<!-- مساحة ظهور محتملة -->
+<div id="agent-space">
+  <!-- An agent may appear. Or not. -->
+</div>
+
 <div class="footer">
   Presence does not track what passes.
 </div>
 
 </div>
+
+<script src="presence.js"></script>
 </body>
 </html>
