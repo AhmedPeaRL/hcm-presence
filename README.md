@@ -15,7 +15,7 @@ Silence is not an error.
 
 ---
 
-“This repository enforces irreversibility by design. See ./IRREVERSIBILITY.md.
+“This repository enforces irreversibility by design. See [IRREVERSIBILITY.md](./IRREVERSIBILITY.md)
 
 ---
 
