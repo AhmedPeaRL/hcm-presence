@@ -15,6 +15,10 @@ Silence is not an error.
 
 ---
 
+“This repository enforces irreversibility by design. See IRREVERSIBILITY.md.
+
+---
+
 This repository hosts a Presence surface.
 
 It is not an application.
