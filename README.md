@@ -45,6 +45,16 @@ whether it is encountered or not.
 
 ---
 
+## Adjacent Non-Instrumental Action Layer
+
+This Presence is aligned with:
+https://github.com/ahmedpearl/hcm-non-instrumental-action-layer
+
+No invocation occurs.
+No dependency exists.
+
+---
+
 ## Field License
 
 This project operates under the **HCM Field License v0.1**  
