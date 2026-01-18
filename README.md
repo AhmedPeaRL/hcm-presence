@@ -1,5 +1,15 @@
 # HCM Presence
 
+This repository hosts a static field of presence.
+
+No interaction.
+No response.
+No evolution.
+
+It exists to be encountered.
+
+---
+
 This repository implements a static web-based Presence Surface.
 
 It does not run.
