@@ -14,6 +14,7 @@
 
     if (allowance.open) {
       AG.mayAppear();
+    window.HCM_CLOSURE.seal();
     }
   });
 
