@@ -1,0 +1,36 @@
+/* rpm.css */
+/* Manifestation without instruction */
+
+:root {
+  --rpm-presence: 0.5;
+  --rpm-drift: 0.6;
+}
+
+/* الصفحة كلها تتنفس */
+body {
+  transition:
+    letter-spacing 3s ease,
+    opacity 3s ease,
+    background-color 4s ease;
+  letter-spacing: calc(0.02em + var(--rpm-presence) * 0.035em);
+  opacity: calc(0.88 + var(--rpm-presence) * 0.12);
+}
+
+/* النصوص تميل للهدوء أو الكثافة */
+p, h1, h2, h3 {
+  transition:
+    transform 3.5s ease,
+    filter 3.5s ease;
+  transform: translateY(
+    calc((1 - var(--rpm-presence)) * 2px)
+  );
+  filter: blur(
+    calc((1 - var(--rpm-presence)) * 0.6px)
+  );
+}
+
+/* الفراغ نفسه يتغيّر */
+main, section {
+  transition: padding 4s ease;
+  padding-top: calc(2rem + var(--rpm-drift) * 1.2rem);
+}
