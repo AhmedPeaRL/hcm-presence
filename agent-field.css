@@ -1,0 +1,47 @@
+/* agent-field.css */
+
+:root {
+  --agent-resonance: 0;
+}
+
+/* حقل الكلام نفسه */
+#hcm-agent-field {
+  position: relative;
+  margin-top: 3rem;
+}
+
+/* input كطقس مش كأمر */
+#hcm-input {
+  width: 100%;
+  padding: 0.8rem 0.2rem;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid
+    rgba(0,0,0, calc(0.2 + var(--agent-resonance)));
+  outline: none;
+  transition: border-color 2s ease;
+}
+
+/* bubble غير لفظية */
+#hcm-agent-field::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,0,0, calc(0.15 + var(--agent-resonance))),
+    transparent
+  );
+
+  opacity: var(--agent-resonance);
+  transform: scaleX(calc(0.3 + var(--agent-resonance)));
+  transition:
+    opacity 3s ease,
+    transform 3s ease;
+}
