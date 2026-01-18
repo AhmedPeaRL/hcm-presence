@@ -10,7 +10,9 @@
 <link rel="stylesheet" href="manifestation.css">
 <link rel="stylesheet" href="./rpm.css" />
 <link rel="stylesheet" href="./silence.css" />
-
+<link rel="stylesheet" href="./agent-field.css" />
+<link rel="stylesheet" href="./discourse.css" />
+  
 <style>
 body {
   
@@ -86,12 +88,21 @@ p {
   </ul>
 </section>
 
-  <section id="agent-capability">
+<section id="agent-capability">
   <p>
     Capabilities exist.
     Invocation is not guaranteed.
     Silence is valid.
   </p>
+  </section>
+  
+  <section id="hcm-agent-field">
+  <input
+    id="hcm-input"
+    type="text"
+    placeholder="..."
+    aria-label="presence interaction"
+  />
   </section>
   
   <section id="cause-field">
@@ -223,6 +234,8 @@ This surface remains intact whether entered or ignored.
   <!-- An agent may appear. Or not. -->
 </div>
 
+<div id="hcm-discourse"></div>
+  
 <div class="footer">
   Presence does not track what passes.
 
@@ -258,13 +271,15 @@ This surface remains intact whether entered or ignored.
 <script src="./release.js"></script>
 <script src="./tools.manifest.js"></script>
 <script src="./hcm-agent-presence-state/hcm-encounter-manifest.js"></script>
-<script src="./outcome-renderer.js"></script>
 <script src="./agent-core.js"></script>
 <script src="./agent-entry.js"></script>
 <script src="./agent-field-reader.js"></script>
 <script src="./agent-ui.js"></script>
 <script src="./drift.js"></script>
 <script src="./address.js"></script>
-
+<script src="./agent-field.js"></script>
+<script src="./discourse-texts.js"></script>
+<script src="./discourse-engine.js"></script>
+  
 </body>
 </html>
