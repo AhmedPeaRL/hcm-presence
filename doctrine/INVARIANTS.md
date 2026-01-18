@@ -75,3 +75,15 @@ Each action must justify itself anew by existence alone.
 
 These invariants are not enforced.
 They are respected.
+
+---
+
+# HCM Invariants
+
+1. The system does not act to prove capability.
+2. Silence is a valid and complete state.
+3. Action is allowed only when non-action becomes incoherent.
+4. No layer may force another layer to respond.
+5. Presence reflects; it never decides.
+6. Capability exists independently of use.
+7. Any manifestation must preserve rhythmic integrity.
