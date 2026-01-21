@@ -1,0 +1,53 @@
+/* HCM Visual Stillness Guard */
+/* This file prevents visual interference. It does not design. */
+
+:root {
+  --field-bg: #0f0f11;
+  --field-fg: #e6e6e6;
+  --field-muted: #9a9a9a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  animation: none !important;
+  transition: none !important;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--field-bg);
+  color: var(--field-fg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* Remove all visual urgency */
+
+a,
+button,
+input,
+textarea {
+  background: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+/* No hover signaling */
+
+*:hover {
+  background: inherit;
+  color: inherit;
+}
+
+/* Text breathing only */
+
+p, span, div {
+  letter-spacing: 0.01em;
+}
