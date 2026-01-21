@@ -1,0 +1,19 @@
+/* Semantic Silence Layer */
+/* Prevents linguistic coercion */
+
+::placeholder {
+  color: transparent;
+}
+
+input::before,
+textarea::before {
+  content: none;
+}
+
+/* No hinting */
+
+[data-hint],
+[data-suggestion],
+[data-tooltip] {
+  display: none !important;
+}
