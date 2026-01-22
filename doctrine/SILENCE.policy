@@ -1,0 +1,10 @@
+RULE: Silence is a functional state.
+
+
+- No automation
+- No hooks
+- No listeners
+- No schedules
+
+
+Silence must not be optimized.
